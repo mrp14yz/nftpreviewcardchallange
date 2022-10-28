@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <style>
+    body{
+      font-size: 18px;
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--very-dark-blue-main);
+    }
+    a{
+      text-decoration: none;
+    }
+    .card{
+      width: 21rem;
+      background-color: var(--very-dark-blue-card);
+      color: var(--soft-blue);
+    }
+    .card-footer{
+      background-color: var(--very-dark-blue-card);
+      border-top-color: var(--very-dark-blue-line) !important;
+    }
+    .container{
+      position: relative;
+    }
+    .overlay{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 8px;
+      opacity: 0;
+      background-color: var(--cyan);
+    }
+    .container:hover .overlay{
+      opacity: 0.5;
+    }
+    #creator-name:hover, #nft-name:hover{
+      color: var(--cyan) !important;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card p-4 pb-3 rounded-4 position-absolute top-50 start-50 translate-middle">
+      <div class="container p-0 pb-2">
+        <img src="images/image-equilibrium.jpg" class="card-img rounded-4" alt="nft-images" id="product-img">
+        <a href="#">
+          <div class="card-img overlay rounded-4">
+            <img src="images/icon-view.svg" class="position-absolute top-50 start-50 translate-middle" alt="icon-view">
+          </div>
+        </a>
+      </div>
+      <div class="card-body px-0">
+        <a href="#">
+          <h1 class="card-title fs-4 fw-semibold" id="nft-name">Equilibrium #3429</h1>
+        </a>
+        <p class="card-text fw-light">Our Equilibrium collection promotes balance and calm.</p>
+        <div class="row">
+          <div class="col-auto me-auto">
+            <img src="images/icon-ethereum.svg" alt="icon-ethereum">
+            <span class="align-middle" style="color: var(--cyan);">
+              0.041 ETH
+            </span>
+          </div>
+          <div class="col-auto">
+            <img src="images/icon-clock.svg" alt="icon-clock">
+            <span class="align-middle">3 days left</span>
+          </div>
+        </div>    
+      </div>
+      <div class="card-footer border-top px-0 pt-3 fw-light">
+        <img src="images/image-avatar.png" class="img-fluid border border-2 rounded-circle me-2" alt="avatar" style="width: 32px; height: 32px;">
+        <span class="align-middle">Creation of </span>
+        <a href="#" class="align-middle" style="color: var(--white);" id="creator-name">Jules Wyvern</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="position-absolute bottom-0 start-50 translate-middle-x">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">@mrp14yz</a>.
+    </div>
+  </footer> 
+</body>
+</html>
